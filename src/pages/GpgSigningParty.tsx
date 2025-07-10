@@ -339,8 +339,7 @@ gpg> save`,
             outputMode === "upload"
               ? `gpg: 正在发送密钥 ${myFingerprint.slice(
                   -16
-                )} 到 ${keyserver}
-gpg: 成功发送密钥`
+                )} 到 ${keyserver}`
               : `# 已将所有签名导出到 sig-${myFingerprint.slice(
                   -8
                 )}.asc 文件中`,
