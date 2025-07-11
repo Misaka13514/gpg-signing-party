@@ -226,7 +226,9 @@ export default function GpgSigningParty() {
       const steps: CommandStep[] = [
         {
           title: "1. 获取密钥及所有签名",
-          command: `gpg --keyserver ${keyserver} --keyserver-options no-self-sigs-only --recv-keys ${myFingerprint}`,
+          command: `gpg --keyserver ${keyserver} --keyserver-options no-self-sigs-only --recv-keys ${myFingerprint}
+# 因部分gpg版本不能获取完整密钥，为避免产生重复签名，如果您曾经签署过我的部分UID，请再次运行以下命令以获取完整的密钥
+curl -s "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x${myFingerprint}" | gpg --import`,
           example: `gpg: 密钥 ${myFingerprint.slice(-16)}: 公钥 “${
             UID_OPTIONS[0]
           }” 已导入
