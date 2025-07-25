@@ -34,6 +34,7 @@ const UID_OPTIONS = [
   "Misaka13514 <Misaka13514@gmail.com>",
   "Misaka_0x34ca <admin@atri.tk>",
   "Misaka_0x34ca <admin@apeiria.net>",
+  "Misaka13514 (Package Maintainer - Arch Linux CN Repository) <Misaka13514@archlinuxcn.org>",
 ];
 const CERT_OPTIONS = [
   { value: "0", label: "我不作答。（默认）" },
@@ -250,6 +251,7 @@ sub  ed25519/B4F6D57F0FC9507E
 [ 未知 ] (1). ${UID_OPTIONS[0]}
 [ 未知 ] (2)  ${UID_OPTIONS[1]}
 [ 未知 ] (3)  ${UID_OPTIONS[2]}
+[ 未知 ] (4)  ${UID_OPTIONS[3]}
 
 ${
   uids.length === UID_OPTIONS.length
@@ -304,7 +306,7 @@ gpg> save`,
                   `uid             [ 完全 ] ${uid}`,
                   `sig 3        ${myFingerprint.slice(
                     -16
-                  )} 2023-01-01  [自签名]`,
+                  )} 2025-07-18  [自签名]`,
                   `${levelSig}${localUser} ${dateStr}  Your Name <your@email>`,
                 ].join("\n");
               } else {
@@ -312,7 +314,7 @@ gpg> save`,
                   `uid             [ 未知 ] ${uid}`,
                   `sig 3        ${myFingerprint.slice(
                     -16
-                  )} 2023-01-01  [自签名]`,
+                  )} 2025-07-18  [自签名]`,
                 ].join("\n");
               }
             });
