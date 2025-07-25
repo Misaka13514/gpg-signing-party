@@ -510,6 +510,24 @@ gpg> save`,
                       </a>{" "}
                       验证。
                     </li>
+                    <li>
+                      <a
+                        href="mailto:Misaka13514@archlinuxcn.org"
+                        className="text-blue-600 hover:underline"
+                      >
+                        Misaka13514@archlinuxcn.org
+                      </a>
+                      ，可通过{" "}
+                      <a
+                        href="https://github.com/orgs/archlinuxcn/people?query=Misaka13514"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 hover:underline"
+                      >
+                        GitHub
+                      </a>{" "}
+                      间接验证。
+                    </li>
                   </ul>
                 </div>
 
